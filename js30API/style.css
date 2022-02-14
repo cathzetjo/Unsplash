@@ -67,6 +67,8 @@ footer .general-info {
     width: 15%;
     justify-content: space-evenly;
     color: var(--font-color);
+    gap: 10px;
+    min-width: 320px;
 }
 
 header {
@@ -75,9 +77,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     min-height: 70px;
-}
-
-header {
+    gap: 25px;
     border-bottom: 5px solid var(--icons-color);
 }
 
@@ -140,4 +140,35 @@ a:hover {
 
 main {
     min-height: 500px;
+}
+
+
+@media (max-width: 680px) {
+
+    body {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding-bottom: 10px;
+    }
+
+    header #search_box input {
+        width: unset;
+    }
+
+    header #search_box {
+        width: unset;
+    }
+
+    header i {
+        font-size: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+    header #search_box i {
+        top: 20%;
+    }
 }
