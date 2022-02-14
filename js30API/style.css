@@ -1,22 +1,24 @@
 :root {
-    --body-color: rgba(163, 171, 162, 0.18);
-    --h1-color: #1d504f;
-    --font-color: #000000;
-    --icons-color: #399d9c;
+    --body-color: rgba(38, 38, 38, 0.9);
+    --h1-color: #399d9c;
+    --font-color: #ffffff;
+    --box-shadow: #4afbfa;
+    --icons-color: #39b5b4;
+
 }
 
 [data-theme='light']{
     --body-color: rgba(163, 171, 162, 0.18);
     --h1-color: #1d504f;
     --font-color: #000000;
-    --icons-color: #399d9c;
+    --box-shadow: #39b5b4;
 }
 
 [data-theme='dark']{
     --body-color: rgba(38, 38, 38, 0.9);
     --h1-color: #399d9c;
     --font-color: #ffffff;
-    --icons-color: #399d9c;
+    --box-shadow: #4afbfa;
 }
 
 @font-face {
@@ -119,7 +121,7 @@ header #search_box input {
 }
 
 input:focus {
-    box-shadow: 0 0 5px var(--icons-color);
+    box-shadow: 0 0 5px var(--box-shadow);
     border: 1px solid var(--icons-color);
 }
 
@@ -171,4 +173,26 @@ main {
     header #search_box i {
         top: 20%;
     }
+}
+
+main {
+    margin: 50px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.picture {
+    width: 380px;
+    height: 214px;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid var(--font-color);
+    transition: 1s;
+}
+
+.picture:hover {
+    box-shadow: var(--font-color) 0px 20px 30px -10px;
+    transition: 1s;
 }
